@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For maram ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    background:#ffd6e7;
+    font-family:Arial;
+    text-align:center;
+}
+
+.container{
+    margin-top:50px;
+}
+
+h1{
+    color:#d10068;
+    font-size:35px;
+}
+
+img{
+    width:250px;
+    border-radius:20px;
+    margin:20px 0;
+}
+
+button{
+    border:none;
+    padding:15px 35px;
+    font-size:20px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#yesBtn{
+    background:#2ecc71;
+    color:white;
+}
+
+#noBtn{
+    background:#e74c3c;
+    color:white;
+    margin-left:10px;
+}
+
+#finalPage{
+    display:none;
+    margin-top:40px;
+}
+
+#finalPage h2{
+    color:#d10068;
+    font-size:32px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+ممكن نبقي سوا يكوتي وتبقي ليا لوحدي؟ ❤️
+</h1>
+
+<img id="firstImage" src="first.png">
+
+<br>
+
+<button id="yesBtn">Yes</button>
+<button id="noBtn">No</button>
+
+<div id="finalPage">
+
+<h2>
+بحبك خالص والله يا مرام انتي احلي حاجة حصلت ليا  ❤
+</h2>
+
+<img src="final.png">
+
+</div>
+
+</div>
+
+<script>
+
+let yesBtn = document.getElementById("yesBtn");
+let noBtn = document.getElementById("noBtn");
+
+let size = 20;
+
+noBtn.addEventListener("click", ()=>{
+
+    size += 15;
+
+    yesBtn.style.fontSize = size + "px";
+    yesBtn.style.padding = (size/2) + "px " + size + "px";
+
+});
+
+yesBtn.addEventListener("click", ()=>{
+
+    document.querySelector("h1").style.display = "none";
+
+    document.getElementById("firstImage").style.display = "none";
+
+    yesBtn.style.display = "none";
+    noBtn.style.display = "none";
+
+    document.getElementById("finalPage").style.display = "block";
+
+});
+
+</script>
+
+</body>
+</html>
